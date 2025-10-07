@@ -3,6 +3,7 @@ body {
   margin: 0;
   color: #ffffff;
   background: #000000 url(leaf.jpg)
+  background-size: cover;
 no-repeat
 }
 h1 {
@@ -10,6 +11,7 @@ h1 {
   font: fantasy x-large
   "Times New Roman",Times,serif
 }
+
 
 
 
