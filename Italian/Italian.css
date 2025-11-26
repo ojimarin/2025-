@@ -17,7 +17,7 @@ image-container {
     /* 均等幅はFlexboxに任せる */
     width: 30%;
     /* 高さを固定する (例: 200px) */
-    height: 200px; 
+    height: 50px; 
     /* 画像が固定された領域からはみ出る場合、中央を基準にトリミングする */
     object-fit: cover; 
 }
