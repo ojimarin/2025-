@@ -1,8 +1,4 @@
-/*
-====================================
-  基本設定 (リセット、フォント、背景色)
-====================================
-*/
+
 body {
     font-family: 'Georgia', 'Times New Roman', serif; /* タイトルや見出しにクラシックなセリフ体 */
     color: #333; /* 本文の文字色 */
@@ -12,11 +8,7 @@ body {
     padding: 0;
 }
 
-/*
-====================================
-  ヘッダー & ナビゲーション
-====================================
-*/
+
 header {
     background-color: #A00000; /* ヘッダー背景色 (深みのある赤) */
     color: #FAF0E6;
@@ -54,18 +46,14 @@ nav ul li a:hover {
     border-bottom: 2px solid #FFD700; /* ホバーでゴールドの線 */
 }
 
-/*
-====================================
-  メインコンテンツの共通レイアウト
-====================================
-*/
-.container {
+
+container {
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
-.section-title {
+section-title {
     text-align: center;
     font-size: 2em;
     color: #A00000;
@@ -75,19 +63,15 @@ nav ul li a:hover {
     display: inline-block;
 }
 
-/*
-====================================
-  画像とカードレイアウト
-====================================
-*/
-.image-grid {
+
+image-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
 }
 
-.image-card, .concept-item {
+image-card, .concept-item {
     flex: 1 1 calc(33.33% - 20px); /* 3枚横並び (画面幅に合わせて調整) */
     max-width: 350px;
     background: #FFF;
@@ -97,20 +81,20 @@ nav ul li a:hover {
     overflow: hidden;
 }
 
-.image-card img, .concept-item img {
+image-card img, .concept-item img {
     width: 100%;
     /* 異なる大きさの画像を同じサイズにするため object-fit を使用 */
     height: 250px; /* 固定の高さ */
     object-fit: cover; /* 縦横比を維持しつつ、トリミングして領域を覆う */
 }
 
-.image-card h3, .concept-item h3 {
+image-card h3, .concept-item h3 {
     color: #A00000;
     padding: 10px 0;
     margin: 0;
 }
 
-.image-card p, .concept-item p {
+image-card p, .concept-item p {
     padding: 0 15px 15px;
     margin: 0;
     font-size: 0.9em;
@@ -129,7 +113,7 @@ footer {
     margin-top: 50px;
 }
 
-.back-link a {
+back-link a {
     color: #FFD700; /* ゴールド */
     text-decoration: none;
     font-weight: bold;
