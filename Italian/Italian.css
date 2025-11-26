@@ -100,11 +100,6 @@ image-card p, .concept-item p {
     font-size: 0.9em;
 }
 
-/*
-====================================
-  フッター
-====================================
-*/
 footer {
     background-color: #333;
     color: #AAA;
@@ -118,3 +113,22 @@ back-link a {
     text-decoration: none;
     font-weight: bold;
 }
+
+image-wrapper {
+            /* 1. 子要素（画像）を中央に寄せるための設定 */
+            text-align: center; 
+            margin-top: 20px; /* 見やすいように上の余白を追加 */
+        }
+        
+target-image {
+            /* 2. 画像のサイズを固定する */
+            width: 400px;  /* 例として幅を400pxに指定 */
+            height: 300px; /* 例として高さを300pxに指定 */
+            
+            /* 3. 画像の表示方法（重要） */
+            object-fit: cover; /* 縦横比を保ちつつ、指定サイズを覆うようにトリミング */
+            
+            /* 4. ブロック要素として扱い、中央配置を安定させる */
+            display: block; 
+            margin: 0 auto; /* 左右のmarginをautoにすることで中央配置 */
+        }
