@@ -1,101 +1,136 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Noto+Sans+JP:wght@300;400;500&display=swap');
-
-full-width {
-    width: 100%;
-    height: auto;     
-    display: block;   
-}
-
-image-container {
-    display: flex;
-    gap: 20px;
-    width: 30%;
-    height: auto;
-}
-
-.image-container img {
-    /* 均等幅はFlexboxに任せる */
-    width: 30%;
-    /* 高さを固定する (例: 200px) */
-    height: 50px; 
-    /* 画像が固定された領域からはみ出る場合、中央を基準にトリミングする */
-    object-fit: cover; 
-}
-
+/*
+====================================
+  基本設定 (リセット、フォント、背景色)
+====================================
+*/
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Georgia', 'Times New Roman', serif; /* タイトルや見出しにクラシックなセリフ体 */
+    color: #333; /* 本文の文字色 */
+    background-color: #FAF0E6; /* 全体の背景色 (ライトベージュ) */
+    line-height: 1.6;
     margin: 0;
     padding: 0;
 }
+
+/*
+====================================
+  ヘッダー & ナビゲーション
+====================================
+*/
 header {
-    background: #B22222;
-    color: white;
-    padding: 16px 30px;
-    display: flex;
-    align-items: center;
+    background-color: #A00000; /* ヘッダー背景色 (深みのある赤) */
+    color: #FAF0E6;
+    padding: 20px 0;
+    text-align: center;
 }
 
-header img.logo {
-    height: 50px;
-    margin-right: 20px;
+header h1 {
+    font-family: 'Arial Black', sans-serif; /* ロゴは視認性の高いサンセリフ体 */
+    font-size: 2.5em;
+    margin: 0;
 }
 
 nav ul {
     list-style: none;
-    display: flex;
-    gap: 20px;
+    padding: 0;
+    margin-top: 10px;
 }
 
-nav a {
-    color: white;
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #FFF;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s;
 }
 
-nav a:hover {
-    text-decoration: underline;
+nav ul li a:hover {
+    border-bottom: 2px solid #FFD700; /* ホバーでゴールドの線 */
 }
 
-.hero {
-    background: url('../img/hero.jpg') center/cover no-repeat;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-shadow: 0px 0px 10px black;
-    font-family: 'Playfair Display', serif;
-    font-size: 48px;
-}
-
-main {
-    max-width: 900px;
+/*
+====================================
+  メインコンテンツの共通レイアウト
+====================================
+*/
+.container {
+    max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
-h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 32px;
-    margin-top: 40px;
-}
-
-.menu-item {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 30px;
-}
-
-.menu-item img {
-    width: 200px;
-    border-radius: 6px;
-}
-
-footer {
-    background: #B22222;
-    color: white;
+.section-title {
     text-align: center;
-    padding: 20px;
+    font-size: 2em;
+    color: #A00000;
+    margin-bottom: 30px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #A00000;
+    display: inline-block;
+}
+
+/*
+====================================
+  画像とカードレイアウト
+====================================
+*/
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.image-card, .concept-item {
+    flex: 1 1 calc(33.33% - 20px); /* 3枚横並び (画面幅に合わせて調整) */
+    max-width: 350px;
+    background: #FFF;
+    border: 1px solid #E0E0E0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    overflow: hidden;
+}
+
+.image-card img, .concept-item img {
+    width: 100%;
+    /* 異なる大きさの画像を同じサイズにするため object-fit を使用 */
+    height: 250px; /* 固定の高さ */
+    object-fit: cover; /* 縦横比を維持しつつ、トリミングして領域を覆う */
+}
+
+.image-card h3, .concept-item h3 {
+    color: #A00000;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.image-card p, .concept-item p {
+    padding: 0 15px 15px;
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/*
+====================================
+  フッター
+====================================
+*/
+footer {
+    background-color: #333;
+    color: #AAA;
+    text-align: center;
+    padding: 20px 0;
     margin-top: 50px;
 }
 
+.back-link a {
+    color: #FFD700; /* ゴールド */
+    text-decoration: none;
+    font-weight: bold;
+}
