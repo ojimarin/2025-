@@ -7,21 +7,25 @@ full-width {
 }
 
 image-gallery {
-    /* 子要素（.image-item）を横並びにします */
-    display: flex; 
-    /* 横幅いっぱいに広げ、アイテム間のスペースを均等に空けます */
-    justify-content: space-between; 
-    /* 必要に応じて最大幅を設定できます */
-    max-width: 900px; 
-    margin: 0 auto; /* 中央寄せにします */
+   display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
     padding: 20px;
 }
 
 image-item {
     /* 画像の幅を親コンテナの約3分の1に設定（間隔を空ける分を考慮） */
-    width: 30%; 
-    /* キャプションを画像の下中央に配置するため、テキストを中央寄せにします */
-    text-align: center;
+    width: 100%; 
+    
+    /* ★固定の高さを設定して画像を揃えます★ */
+    height: 200px; 
+    
+    /* ★画像のアスペクト比を維持しつつ、指定されたサイズに収まるようにトリミング（切り抜き）します★ */
+    object-fit: cover; 
+    
+    /* 画像とキャプションの間に間隔を空ける */
+    margin-bottom: 10px;
 }
 
 image-item img {
