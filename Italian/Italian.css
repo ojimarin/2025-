@@ -8,16 +8,19 @@ full-width {
 
 image-container {
     display: flex;
-    justify-content: space-around; /* 子要素を均等に配置します */
-    align-items: center; /* 子要素を縦方向の中心に揃えます */
+    gap: 20px;
     height: 100vh; /* ビューポートの高さに合わせます（任意） */
-    width: 30%;
-    height: 30%
+    width: 100%;
+    height: auto;
 }
 
-image-container img {
-    max-width: 30%; /* 画像の最大幅を設定します */
-    height: auto; /* 画像の縦横比を維持します */
+.image-container img {
+    /* 均等幅はFlexboxに任せる */
+    width: 100%;
+    /* 高さを固定する (例: 200px) */
+    height: 200px; 
+    /* 画像が固定された領域からはみ出る場合、中央を基準にトリミングする */
+    object-fit: cover; 
 }
 
 body {
