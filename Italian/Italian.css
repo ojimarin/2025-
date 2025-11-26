@@ -6,54 +6,23 @@ full-width {
     display: block;   
 }
 
-/* ギャラリー全体を制御する親コンテナ */
-.image-gallery {
-    /* ★横並びにするための設定★ */
-    display: flex; 
-    /* ★アイテム間の間隔を均等に空ける設定★ */
-    justify-content: space-between; 
-    /* 必要に応じて全体の最大幅と中央寄せを設定 */
-    max-width: 900px; 
-    margin: 20px auto;
+image-container {
+    display: flex;
+    justify-content: space-around; /* 子要素を均等に配置します */
+    align-items: center; /* 子要素を縦方向の中心に揃えます */
+    height: 100vh; /* ビューポートの高さに合わせます（任意） */
 }
 
-/* 個々の画像とキャプションを囲むコンテナ */
-.image-item {
-    /* 3つ並べるため、幅を全体の3分の1より少し小さく設定（残りが間隔になります） */
-    width: 30%; 
-    /* キャプション（テキスト）を中央寄せにする */
-    text-align: center;
-}
-
-/* 画像自体のスタイル */
-.image-item img {
-    /* 親要素 (.image-item) の幅いっぱいに広げる */
-    width: 100%; 
-    
-    /* ★画像の高さを固定し、すべての画像を同じサイズにする★ */
-    height: 200px; 
-    
-    /* ★縦横比を保ちつつ、指定されたサイズ (200px) に収まるようにトリミングする★ */
-    object-fit: cover; 
-    
-    /* 画像とキャプションの間に少し間隔を空ける */
-    margin-bottom: 8px;
-}
-
-/* キャプションのスタイル */
-.image-item .caption {
-    font-size: 14px;
-    color: #333;
+image-container img {
+    max-width: 30%; /* 画像の最大幅を設定します */
+    height: auto; /* 画像の縦横比を維持します */
 }
 
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #FAF7F0;
-    font-family: 'Noto Sans JP', sans-serif;
-    color: #333;
 }
-
 header {
     background: #B22222;
     color: white;
