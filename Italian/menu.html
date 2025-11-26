@@ -1,26 +1,52 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<title>メニュー - Trattoria Felice</title>
-<link rel="stylesheet" href="css/style.css">
-   
+    <meta charset="UTF-8">
+    <title>画像3枚 横並びのサンプル</title>
+    <style>
+        /* ここにCSSを記述します */
+        /*
+         * 外部ファイルにすることも推奨されますが、
+         * 今回は簡単のため<style>タグ内に記述します。
+         */
+        
+        .image-container {
+            /* 1. Flexboxを有効にして子要素を横並びにする */
+            display: flex;
+            
+            /* 2. 子要素間の間隔を設定する */
+            gap: 20px; /* 画像間の間隔を20ピクセルに設定 */
+            
+            /* 3. コンテナ全体を中央に配置したい場合はこれを使います */
+            /* justify-content: center; */ 
+            
+            /* 4. コンテナの最大幅を設定しておくと見栄えが良くなります */
+            /* max-width: 900px; */ 
+            /* margin: 0 auto; */
+        }
+
+        .image-container img {
+            /* 5. 画像をコンテナ内で均等な大きさに設定する */
+            /* flex-grow: 1;  - 各画像を均等に拡大させる */
+            /* flex-basis: 0; - flex-growと合わせて均等幅にするための設定 */
+            
+            /* 6. 画像のアスペクト比を維持しつつ、はみ出さないように調整 */
+            width: 100%; /* 親要素（.image-containerのアイテム）の幅いっぱい */
+            height: auto; /* 高さは自動調整 */
+            
+            /* 7. すべての画像が同じ「見かけの」サイズになるようにします */
+            /* object-fit: cover; を使用すると、画像がトリミングされることがあります */
+            /* 今回は幅が均等で、高さが自動調整される設定が最も一般的です。 */
+        }
+    </style>
 </head>
 <body>
-<header>
-   <div style="text-align: center;"><img src="メニュー.png">
-   
-        <ul>
-            <li><a href="index.html">ホーム</a></li>
-            <li><a href="about.html">お店について</a></li>
-            <li><a href="menu.html">メニュー</a></li>
-            <li><a href="access.html">アクセス</a></li>
-        </ul>
-</header>
-   <div class="image-container">
-        <img src="アヒージョ.jpg" alt="画像1">
-        <img src="こだわり1絶品パスタ.jpg" alt="画像2">
-        <img src="トマトとモッツァレラチーズ.jpg" alt="画像3">
+
+    <div class="image-container">
+        <img src="アヒージョ.jpg" alt="画像1の説明">
+        <img src="こだわり1絶品パスタ.jpg" alt="画像2の説明">
+        <img src="トマトとモッツァレラチーズ.jpg" alt="画像3の説明">
     </div>
+
 </body>
 </html>
