@@ -9,7 +9,6 @@ full-width {
 image-container {
     display: flex;
     gap: 20px;
-    height: 100vh; /* ビューポートの高さに合わせます（任意） */
     width: 100%;
     height: auto;
 }
