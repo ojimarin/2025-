@@ -9,13 +9,13 @@ full-width {
 image-container {
     display: flex;
     gap: 20px;
-    width: 100%;
+    width: 30%;
     height: auto;
 }
 
 .image-container img {
     /* 均等幅はFlexboxに任せる */
-    width: 100%;
+    width: 30%;
     /* 高さを固定する (例: 200px) */
     height: 200px; 
     /* 画像が固定された領域からはみ出る場合、中央を基準にトリミングする */
