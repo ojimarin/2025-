@@ -4,6 +4,41 @@
 <meta charset="UTF-8">
 <title>メニュー - Trattoria Felice</title>
 <link rel="stylesheet" href="css/style.css">
+   <style>
+        /* 1. 全体コンテナのスタイル */
+        .image-container {
+            display: flex;
+            width: 100%;
+            /* 画像セット間の間隔を均等に空ける */
+            justify-content: space-between;
+        }
+
+        /* 2. 画像とテキストのセットコンテナ */
+        .image-set {
+            /* 3つのセットが等しい幅になるように設定。残りの幅が間隔になります。 */
+            width: 31%;
+            /* このコンテナ内のテキストを中央揃えにする */
+            text-align: center; 
+        }
+
+        /* 3. 画像自体のスタイル */
+        .image-set img {
+            /* 親要素 (.image-set) の幅いっぱいに画像を広げる */
+            width: 100%;
+            height: auto;
+            /* 見た目を確認しやすいようにボーダーを追加 */
+            border: 1px solid #ccc;
+        }
+
+        /* 4. キャプションテキストのスタイル */
+        .caption-text {
+            /* 画像との間隔 */
+            margin-top: 5px;
+            margin-bottom: 0;
+            font-size: 1em;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
 <header>
