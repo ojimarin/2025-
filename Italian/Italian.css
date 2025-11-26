@@ -6,6 +6,28 @@ full-width {
     display: block;   
 }
 
+image-set {
+    /* 画像の幅（31%）を継承し、横並びを維持する */
+    width: 31%; 
+    
+    /* このコンテナ内のテキストを中央揃えにする */
+    text-align: center; 
+}
+
+image-set img {
+    /* 親要素 (.image-set) の幅いっぱいに画像を広げる */
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+caption-text {
+    /* 画像とテキストの間隔を調整 */
+    margin-top: 5px; 
+    font-size: 1em;
+    color: #333;
+}
+
 body {
     margin: 0;
     padding: 0;
