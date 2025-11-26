@@ -21,7 +21,7 @@
              justify-content: center;  
             
             /* 4. コンテナの最大幅を設定しておくと見栄えが良くなります */
-             max-width: 900px; 
+             max-width: auto; 
              margin: 0 auto; 
         }
 
@@ -31,8 +31,8 @@
              flex-basis: 0; - flex-growと合わせて均等幅にするための設定 */
             
             /* 6. 画像のアスペクト比を維持しつつ、はみ出さないように調整 */
-            width: 100%; /* 親要素（.image-containerのアイテム）の幅いっぱい */
-            height: auto; /* 高さは自動調整 */
+            width: 200px; /* 親要素（.image-containerのアイテム）の幅いっぱい */
+            height: 200px; /* 高さは自動調整 */
             
             /* 7. すべての画像が同じ「見かけの」サイズになるようにします */
             object-fit: cover; を使用すると、画像がトリミングされることがあります 
