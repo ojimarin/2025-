@@ -83,16 +83,10 @@ image-card {
 }
 
 image-card img {
-    /* ★★★ 画像のサイズを統一するCSS ★★★ */
-    
-    /* 1. 幅を親要素の100%に設定 */
-    width: 100%; 
-    
-    /* 2. 高さを固定する (例として250pxに統一) */
-    height: 250px; 
-    
-    /* 3. 縦横比を保ちつつ、固定された領域を完全に覆う（トリミングされる） */
-    object-fit: cover; 
+    /* ★★★ サイズを統一するCSSを強制適用 ★★★ */
+    width: 100% !important; 
+    height: 250px !important; /* 固定の高さ */
+    object-fit: cover !important; 
 }
 image-card img, .concept-item img {
     width: 100%;
