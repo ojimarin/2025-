@@ -1,0 +1,43 @@
+
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+
+image-gallery {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px;
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+image-item {
+    
+    flex: 1 1 calc(33.333% - 7px); 
+    min-width: 300px; 
+    overflow: hidden; 
+}
+
+image-item img {
+    display: block;
+    width: 100%; 
+    height: auto; 
+    height: 250px;
+    object-fit: cover; 
+}
+
+@media (max-width: 600px) {
+    image-item {
+        flex: 1 1 100%;
+        min-width: auto;
+    }
+}
